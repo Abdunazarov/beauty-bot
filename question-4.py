@@ -1,15 +1,11 @@
 # stdlib
-from __future__ import annotations
+from datetime import datetime, timedelta
 
-from datetime import datetime
-from datetime import timedelta
-
+# thirdparty
 from pymongo import MongoClient
 
-from settings import DB_URL
-from settings import EXPIRY_TIME
-# thirparty
 # project
+from settings import EXPIRY_TIME, DB_URL
 
 # Вопрос: 	Предложите систему для очистки данных из MongoDB по истечению заданного времени.
 # Ответ:    Для достижения желаемого результата можно создать TTL индекс, который удалит документы, у которых поле expireAt указывает на прошедшее время.

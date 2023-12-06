@@ -1,15 +1,10 @@
 # stdlib
-from __future__ import annotations
-
 from typing import List
 
-from settings import DIFF_LIST
-from settings import JSON_NEW
-from settings import JSON_OLD
 # project
+from settings import DIFF_LIST, JSON_NEW, JSON_OLD
 
-
-def find_json_diff(json_old: dict, json_new: dict, diff_list: list[str]):
+def find_json_diff(json_old: dict, json_new: dict, diff_list: List[str]):
     result = {}
 
     for key in diff_list:

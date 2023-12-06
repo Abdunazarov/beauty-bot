@@ -1,15 +1,12 @@
 # stdlib
-from __future__ import annotations
-
 from enum import Enum
 
-from fastapi import FastAPI
-from fastapi import HTTPException
+# thirdparty
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
-from settings import FUNCTION_MAP
-# thirdparty
 # project
+from settings import FUNCTION_MAP
 
 
 app = FastAPI()
@@ -41,5 +38,3 @@ async def handle_webhook(data: WebhookDataSchema):
 
     return result
 
-
-# uvicorn question-5:app --reload для запуска приложения
